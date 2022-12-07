@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator1</title>
+    <style>
+        div{
+            width:200px;
+            height:300px;
+            padding: 80px;
+            border:10px solid black;
+        }
+        table{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <td colspan="4"><input id="dataCaculator" type="text"></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputNumber('1')">1</button></td>
+            <td><button onclick="inputNumber('2')">2</button></td>
+            <td><button onclick="inputNumber('3')">3</button></td>
+            <td><button onclick="inputNumber('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputNumber('4')">4</button></td>
+            <td><button onclick="inputNumber('5')">5</button></td>
+            <td><button onclick="inputNumber('6')">6</button></td>
+            <td><button onclick="inputNumber('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputNumber('7')">7</button></td>
+            <td><button onclick="inputNumber('8')">8</button></td>
+            <td><button onclick="inputNumber('9')">9</button></td>
+            <td><button onclick="inputNumber('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="clearData()">C</button></td>
+            <td><button onclick="result()">=</button></td>
+            <td><button onclick="inputNumber('0')">0</button></td>
+            <td><button onclick="inputNumber('/')">/</button></td>
+        </tr>
+    </table></div>
+<script>
+    function inputNumber(input) {
+        document.getElementById("dataCaculator").value+=input
+        console.log(document.getElementById("dataCaculator").value)
+    }
+    function result() {
+        let input= document.getElementById("dataCaculator").value;
+        let result= eval(input);
+        document.getElementById("dataCaculator").value=result;
+    }
+    function clearData() {
+        document.getElementById("dataCaculator").value=("")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tinh chi so body</h1>
+<table>
+    <tr>
+        <td>Can nang</td>
+        <td ><input id="weight" type="text"></td>
+        <td><p>(kg)</p></td>
+    </tr>
+    <tr>
+        <td>Chieu cao</td>
+        <td ><input  id="height" type="text"></td>
+        <td><p>(m)</p></td>
+    </tr>
+</table>
+<button onclick="bmi()">result</button> <p id="result"></p><br>
+<p>Danh gia <b id="critical"></b></p>
+<script>
+    function bmi() {
+        let weight=document.getElementById("weight").value;
+        let height=document.getElementById("height").value;
+        let bmi = weight / ( height*height );
+        console.log("weight>>>>>>" ,weight);
+        console.log("height>>>>>",height);
+        document.getElementById("result").innerHTML=("BMI="+bmi);
+        if (bmi < 18)
+            document.getElementById("critical").innerHTML=("Underweight");
+            else if (bmi < 25.0)
+            document.getElementById("critical").innerHTML=("Normal");
+                else if (bmi < 30.0)
+            document.getElementById("critical").innerHTML=("Overweight");
+        else
+            document.getElementById("critical").innerHTML=("Obese");
+    }
+</script>
+</body>
+</html>

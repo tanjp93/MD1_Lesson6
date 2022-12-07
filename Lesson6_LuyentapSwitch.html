@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch_Case</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="number" max="12" min="1" id="month"></td>
+        <td>
+            <button onclick="checkMonth()">Tinh So Ngay</button>
+        </td>
+        <td><p id="result"></p></td>
+    </tr>
+</table>
+<script>
+    function checkMonth() {
+        let checkMonth = document.getElementById("month").value;
+        checkMonth = parseInt(checkMonth);
+        let Jan = 1;
+        let Feb = 2;
+        let Mar = 3;
+        let April = 4;
+        let May = 5;
+        let June = 6;
+        let July = 7;
+        let August = 8;
+        let September = 9;
+        let October = 10;
+        let November = 11;
+        let December = 12;
+        switch (checkMonth) {
+            case Jan:
+                document.getElementById("result").innerText = "Thang 31 ngay";
+                break;
+            case Feb:
+                document.getElementById("result").innerText = "Thang 28 ngay";
+                break;
+            case Mar:
+                document.getElementById("result").innerText = "Thang 31 ngay";
+                break;
+            case April:
+                document.getElementById("result").innerTexth = "Thang 30 ngay";
+                break;
+            case May:
+                document.getElementById("result").innerText = "Thang 31 ngay";
+                break;
+            case June:
+                document.getElementById("result").innerText = "Thang 30 ngay";
+                break;
+            case July:
+            case August:
+                document.getElementById("result").innerText = "Thang 31 ngay";
+                break;
+            case September :
+                document.getElementById("result").innerText = "Thang 30 ngay";
+                break;
+            case October :
+                document.getElementById("result").innerText = "Thang 31 ngay";
+                break;
+            case November :
+                document.getElementById("result").innerText = "Thang 30 ngay";
+                break;
+            case December :
+                document.getElementById("result").innerText = "Thang 31 ngay";
+                break;
+            default :
+                checkMonth = "undefined ";
+                break;
+        }
+    }
+</script>
+</body>
+</html>
